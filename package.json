@@ -1,5 +1,6 @@
 {
-  "name": "ui-front-aladinmall",
+  "name": "component-burhan",
+  "version": "1.0.0",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +17,7 @@
   "private": true,
   "scripts": {
     "dev": "npm run clean && vite build",
-    "build": "npm run clean && vite build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "lint": "eslint --fix --ext ts --ext tsx --ext js",
@@ -28,7 +29,18 @@
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.5.6"
   },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-docs": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
@@ -43,6 +55,7 @@
     "@typescript-eslint/parser": "^5.38.1",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.12",
+    "cross-env": "^7.0.3",
     "cssnano": "^5.1.13",
     "dayjs": "^1.11.5",
     "eslint": "^7.32.0",
@@ -65,5 +78,8 @@
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vite-plugin-dts": "^1.5.0"
-  }
+  },
+  "description": "component",
+  "repository": "git@github.com:mburhanudin/story-book.git",
+  "author": "mburhanudin <muhammadburhanudin@refactory.id>"
 }
