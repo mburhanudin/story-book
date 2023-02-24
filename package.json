@@ -1,6 +1,6 @@
 {
   "name": "component-burhan",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
